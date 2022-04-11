@@ -171,7 +171,7 @@ footer {
 }
 
 .footer-col {
-    min-width: 100px;
+    min-width: 130px;
     min-height: 350px;
     flex-grow: 1;
     background-color: #40A2B8;
@@ -183,12 +183,5 @@ footer {
     margin-top: 2rem;
     border-top: 1px solid white;
     background-color: #7BF2EB;
-}
-
-.footer-logo {
-    float: left;
-}
-
-.footer-login {
-    float: right;
+    justify-content: space-between;
 }
