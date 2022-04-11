@@ -7,6 +7,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --default-padding: 2rem 1rem;
+}
+
+.clearfix::after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
 .container {
     width: 960px;
     margin: auto;
@@ -16,12 +26,24 @@
     display: flex;
 }
 
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
 .wrap {
     flex-wrap: wrap;
 }
 
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
 .vertical-align {
     align-items: center;
+}
+
+.horizontal-align {
+    justify-content: center;
 }
 
 .black-border {
@@ -32,6 +54,10 @@
     border: 1px dashed red;
 }
 
+.white-border {
+    border: 1px dashed white;
+}
+
 
 /*----------------*/
 /* Navigation Bar */
@@ -40,8 +66,8 @@
 nav {
     height: 100%;
     width: 100%;
-    padding: 12px 0;
-    background-color: grey;
+    background-color: #3866E1;
+    padding: calc((var(--default-padding)) / 2)
 }
 
 .logo {
@@ -58,4 +84,110 @@ nav {
 .login {
     height: 36px;
     min-width: 200px;
+}
+
+
+/*--------*/
+/*  Hero  */
+/*--------*/
+
+header {
+    background-color: #451CB9;
+    width: 100%;
+    padding: var(--default-padding);
+}
+
+.hero {
+    min-height: 400px;
+}
+
+.hero-title {
+    background-color: #E3C53C;
+    min-height: 100px;
+    max-width: 500px;
+    text-align: center;
+}
+
+
+/*------------*/
+/*  Sections  */
+/*------------*/
+
+.first-block,
+.second-block,
+.third-block,
+.fourth-block {
+    padding: var(--default-padding);
+}
+
+.second-block,
+.fourth-block {
+    background-color: #F3F3F3;
+}
+
+.info,
+.cta {
+    padding: 3rem 0;
+}
+
+.cta {
+    height: 900px;
+    background-color: #5EA96F;
+}
+
+.image {
+    background-color: #007FF4;
+    min-height: 500px;
+    min-width: 300px;
+    flex-grow: 1;
+}
+
+.text {
+    background-color: #F9B9DF;
+    min-height: 500px;
+    min-width: 300px;
+}
+
+
+/*----------*/
+/*  Footer  */
+/*----------*/
+
+footer {
+    background-color: #23272A;
+    padding: var(--default-padding);
+    flex-direction: column;
+}
+
+.footer-info {
+    min-width: 300px;
+    min-height: 350px;
+    background-color: #F27B7B;
+}
+
+.footer-menu {
+    flex-grow: 1;
+}
+
+.footer-col {
+    min-width: 100px;
+    min-height: 350px;
+    flex-grow: 1;
+    background-color: #40A2B8;
+}
+
+.footer-copyright {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid white;
+    background-color: #7BF2EB;
+}
+
+.footer-logo {
+    float: left;
+}
+
+.footer-login {
+    float: right;
 }
