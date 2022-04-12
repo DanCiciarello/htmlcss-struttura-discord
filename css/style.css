@@ -11,18 +11,18 @@
     --default-padding: 2rem 1rem;
 }
 
-.clearfix::after {
-    clear: both;
-    display: block;
-    content: "";
-}
-
 .container {
     width: 100%;
     max-width: 960px;
     min-width: 300px;
     margin: auto;
 }
+
+
+/*------*/
+/* Flex */
+/*------*/
+
 
 .flex {
     display: flex;
@@ -36,28 +36,12 @@
     flex-wrap: wrap;
 }
 
-.wrap-reverse {
-    flex-wrap: wrap-reverse;
-}
-
 .vertical-align {
     align-items: center;
 }
 
 .horizontal-align {
     justify-content: center;
-}
-
-.black-border {
-    border: 1px dashed black;
-}
-
-.red-border {
-    border: 1px dashed red;
-}
-
-.white-border {
-    border: 1px dashed white;
 }
 
 
@@ -184,4 +168,22 @@ footer {
     border-top: 1px solid white;
     background-color: #7BF2EB;
     justify-content: space-between;
+}
+
+
+/*-----------*/
+/* Temporary */
+/*-----------*/
+
+
+.black-border {
+    border: 1px dashed black;
+}
+
+.red-border {
+    border: 1px dashed red;
+}
+
+.white-border {
+    border: 1px dashed white;
 }
